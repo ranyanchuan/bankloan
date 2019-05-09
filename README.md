@@ -79,3 +79,11 @@ ncu -a
 
 ```
 
+##### npm run dev
+```bash
+Error: Cannot find module 'webpack/lib/optimize/CommonsChunkPlugin'
+Please check uba.config.js configuration file
+bogon:bankloan_react ayi$ 
+
+```
+
