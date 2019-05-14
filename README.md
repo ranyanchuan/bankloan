@@ -7,6 +7,14 @@
 
   + 再访问
     [http://refdemo.app.yyuap.com/dist/ucf-publish/iuap-pap-demo-fe/ref-demo/index.html](http://refdemo.app.yyuap.com/dist/ucf-publish/iuap-pap-demo-fe/ref-demo/index.html)
+* 参照 pap-refer (基于应用平台和基本参照组件封装的应用级参照组件，暂时无对外文档)
+* 项目参照
+   * 安装 pap-refer `npm install pap-refer@1.0.2
+   * 单表参照示例
+     * 引入单表参照组件`import {RefMultipleTableWithInput} from 'pap-refer';` 和样式 `import 'pap-refer/dist/index.css';`
+`
+     
+  
 
 #### 门户
 * 某一wbalone项目 [https://gitee.com/liushaozhen/sany-wbalone/](https://gitee.com/liushaozhen/sany-wbalone/) 
