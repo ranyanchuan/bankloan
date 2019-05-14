@@ -105,3 +105,6 @@ bogon:bankloan_react ayi$
 ```bash
 import BpmButtonSubmit from "components/Bpm/BpmButtonSubmit";
 ```
+
+#### 查询分页
++ 
