@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e676e2f7-256d-47c0-8f51-47a1e6f44551" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Bpm/BpmTaskApprovalWrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/xwl_sale_order/components/SaleOrder-edit/Edit.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/xwl_sale_order/components/SaleOrder-edit/Edit.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -17,8 +18,10 @@
     <session id="-1844743628">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -36,16 +39,18 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Pages/xwl_sale_order/components/SaleOrder-edit/Edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="389" column="40" lean-forward="true" selection-start-line="389" selection-start-column="40" selection-end-line="389" selection-end-column="40" />
+            <state relative-caret-position="444">
+              <caret line="1884" lean-forward="true" selection-start-line="1884" selection-end-line="1884" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#736#819#0" expanded="true" />
+                <element signature="e#1027#1058#0" expanded="true" />
+                <element signature="e#1404#1456#0" expanded="true" />
                 <element signature="n#!!block;n#initSubType#0;n#Edit#0" />
+                <element signature="e#19959#22801#0" />
                 <element signature="n#!!block;n#calcTotalAccount#0;n#Edit#0" />
               </folding>
             </state>
@@ -55,17 +60,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
+            <state relative-caret-position="1054">
               <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Bpm/BpmTaskApprovalWrap.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            <state relative-caret-position="340">
+              <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
               <folding>
                 <element signature="e#19#58#0" expanded="true" />
                 <element signature="e#12100#14033#0" />
@@ -93,9 +98,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Pages/xwl_sale_order/components/SaleOrder-edit/Edit.js" />
         <option value="$PROJECT_DIR$/src/.gitignore" />
         <option value="$PROJECT_DIR$/src/components/Bpm/BpmTaskApprovalWrap.js" />
+        <option value="$PROJECT_DIR$/src/Pages/xwl_sale_order/components/SaleOrder-edit/Edit.js" />
       </list>
     </option>
   </component>
@@ -111,11 +116,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="267" />
-    <option name="y" value="273" />
-    <option name="width" value="1680" />
-    <option name="height" value="937" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="77" />
+    <option name="y" value="43" />
+    <option name="width" value="1490" />
+    <option name="height" value="934" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -147,6 +152,36 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Bpm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bankloan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bankloan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bankloan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bankloan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="xwl_sale_order" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bankloan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bankloan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="xwl_sale_order" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bankloan" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bankloan" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="xwl_sale_order" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="SaleOrder-edit" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -185,24 +220,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1557801342639</updated>
-      <workItem from="1557801344453" duration="1321000" />
+      <workItem from="1557801344453" duration="1424000" />
+      <workItem from="1557829954663" duration="11000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1321000" />
+    <option name="totallyTimeSpent" value="1435000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="267" y="273" width="1680" height="937" extended-state="0" />
+    <frame x="0" y="23" width="1680" height="937" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.37869823" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -210,6 +242,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.37869823" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -222,30 +258,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Pages/xwl_sale_order/components/SaleOrder-edit/Edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="389" column="40" lean-forward="true" selection-start-line="389" selection-start-column="40" selection-end-line="389" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#736#819#0" expanded="true" />
-            <element signature="n#!!block;n#initSubType#0;n#Edit#0" />
-            <element signature="n#!!block;n#calcTotalAccount#0;n#Edit#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
+        <state relative-caret-position="1054">
           <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Bpm/BpmTaskApprovalWrap.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        <state relative-caret-position="340">
+          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
           <folding>
             <element signature="e#19#58#0" expanded="true" />
             <element signature="e#12100#14033#0" />
@@ -253,6 +276,21 @@
             <element signature="e#15860#17601#0" />
             <element signature="e#17631#18223#0" />
             <element signature="e#18236#19255#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pages/xwl_sale_order/components/SaleOrder-edit/Edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="1884" lean-forward="true" selection-start-line="1884" selection-end-line="1884" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1027#1058#0" expanded="true" />
+            <element signature="e#1404#1456#0" expanded="true" />
+            <element signature="n#!!block;n#initSubType#0;n#Edit#0" />
+            <element signature="e#19959#22801#0" />
+            <element signature="n#!!block;n#calcTotalAccount#0;n#Edit#0" />
           </folding>
         </state>
       </provider>
