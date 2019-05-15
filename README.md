@@ -1,4 +1,4 @@
-#### 参照
+### 参照
 * 参照组件 [https://design.yonyoucloud.com/tinper-acs/ref-multiple-table](https://design.yonyoucloud.com/tinper-acs/ref-multiple-table)
 
 * 参照demo
@@ -36,7 +36,6 @@
           showLoading={false}
           filterUrl='/bankLoan/common-ref/filterRefJSON' //快捷录入接口
           matchUrl='/bankLoan/common-ref/matchPKRefJSON' // 查询接口
-          onCancel={this.onCancel} // 取消事件回调接口
           onSave={(values) => {  // 确定事件回调
               const idArray = values.map(v => v.id); // 获取选中行的数据id
               self.setState({
@@ -124,6 +123,47 @@ matchData | `Array` | [] | 选中的节点(<span style="color: red; font-size: 1
 theme| `String` | 'ref-red' | 参照主题，现在就两种选择'ref-red'或者'ref-blue' | 否
 searchPanelLocale | `Object` | {'title': '条件筛选EN','resetName': '重置En','searchName': '查询EN','down':'打开EN','up':'关闭EN',} | 复杂搜索标题，按钮的文字等信息 | 否
 
+##### 左树右表 API
+参数 | 类型 |默认值| 说明 | 必选
+---|---|--- | --- | ---
+title |``string``|空 |打开上传的模态框显示的标题文字 | 否
+className |`string`|空 | 参照class样式，作用于弹出层和 RefTreeTableWithInput 输入框的样式，默认为空。 | 否
+searchable |`bool`|true |是否显示搜索框，弹出层是否带有搜索框，true 显示，false 不显示。 | 否
+multiple |`bool`| false |是否单选， true 单选，false 多选 | 否
+backdrop |`bool`| true |弹出层是否有模态层，true 显示，false 不显示 | 否
+lang|`string`| `zh_TW` |多语配置，详情查看参数详解 | 否
+buttons |`object`| `okText`: "确认", //确认按钮<br/>`cancelText`: "取消", //取消按钮<br/>`clearText`: "清空已选" //清空已选按钮|弹出层工具栏三个按钮的文字，若 
+hasPage |`bool`|true |是否有分页条，true 有，false 没有 | 否
+tabData |`array`|true |当参照有多个类型的数据时可启用tab标签页来区分，当个点击页签的时候，会根据配置的key再去查询。如：<br />[<br />{"title":"常用","key":"commonUse"},<br /> {"title":"全部","key":"total"},<br />{"title":"推荐","key":"recommed"}<br />] | 否
+defaultExpandAll |`bool`|false |展开所有节点 true 展开，false 不展开 | 否
+checkStrictly |`bool`|false|heckable状态下节点选择完全受控（父子节点选中状态不再关联）, false 关联选择，true 不关联| 否
+param |`objecet`|{} |接口请求参数 | 是
+refModelUrl |`object`|{treeUrl:'',tableBodyUrl:'',refInfo:'',保留了多连接配置。<br/>如：<br/>{ <br/> treeUrl: '/api/user/treeUrl.json',<br/>tableBodyUrl:'blobRefTreeTableGrid',//表体请求<br />refInfo:'refInfo',//表头请求<br />} | 是
+onSave |`function( record:object )`|-- |保存回调函数，返回已选择的记录详细数据。 | 否
+onCancel | `function(  )`|-- |关闭弹出层 | 否
+jsonp| `bool` | false | treeUrl、tableBodyUrl、refInfo、matchUrl的request请求传参jsonp| 否
+onAfterAjax| `function(data)`| -- |treeUrl和tableBodyUrl请求后的回调，返回全部数据| 否
+onTreeLoading | `function(state)` | --|回调函数，三种结果'loaded'、'loading'、'fail',表示树的请求三种状态|否
+menuTitle | `String` | ''| 左树的标题| 否
+tableTitle | `String` | '' | 右表的标题 | 否
+nodeDisplay |<code>string 或 function</code>| `{refname}` |节点渲染时可匹配的内容，这里为了提供根据数据渲染节点图标使用 | 否
+lazyModal |`bool`| false |数据懒加载模式，true 启用，false 不启用 | 否
+param|`object`| {} |refModelUrl 中接口请求的参数 | 否
+searchable |`bool`|true |是否显示搜索框，弹出层是否带有搜索框，true 显示，false 不显示。 | 否
+defaultExpandAll |`bool`|false |展开所有节点 true 展开，false 不展开。前提lazyModal是true| 否
+onChange| `function(checkedArray)`| -- | 左树选中回调函数| 否
+checkAllChildren| `boolean`| false|选中子节点|否
+theme| `String` | 'ref-red' | 参照主题，现在就两种选择'ref-red'或者'ref-blue' | 否
+<s>emptyBut|`bool`|true |是否显示清空按钮，true 显示，false 不显示、sebottomButton 为 false 则该配置无效。| 否 </s>
+<s> bottomButton |`bool`|true | 是否显示弹出层下边框工具栏， false不显示 true 显示`注意该属性为临时兼容配置后期可能随时会弃用` | 否 </s>
+miniSearch(右表)| `Boolean`|true|左表默认是简单搜索|否
+matchUrl| ``string``|空|查询并校验 value 中的 refpk 对应参照的详细记录并且修改checkedArray。 当需要请求接口获取完整数据时，可以传入checkedArray=[]，value中refpk不为空就可以|否
+checkedArray| `array`|[]|已选择数据。注意，当使用RefTreeTableWithInput 或者 搭配refcorewithinput使用时，checkedArray这个参数不起效且初始值默认[] | 否
+headers(右表)| -- | -- | refInfo、tableBodyUrl和matchUrl的request请求传参headers| 否
+onMatchInitValue(右表)| `function(data)` | -- | 返回matchUrl请求的全部数据|否
+
+
+
 ##### 参数解析
 value、displayField value和displayField是针对input框来说。value格式必须符合'{"refname":"初级-T1","refpk":"level1"}'。refname字段不可变，refpk是该数据键，要求具有唯一性。 displayField确定input中显示内容的格式和过滤列表显示内容的格式
 
@@ -132,11 +172,11 @@ value、valueFiled value是input需要使用的数据，要求如上。 valueFil
 value、matchData value初始化input框值，matchData是指定参照中选中的节点。如果value有值matchData为空，那么input有值但是参照无选中数据，反之value空值matchData有值，那么input为空但是参照有选中数据
   
 
-#### 门户
+### 门户
 * 某一wbalone项目 [https://gitee.com/liushaozhen/sany-wbalone/](https://gitee.com/liushaozhen/sany-wbalone/) 
 * 改造后轻量级门户项目[https://github.com/ranyanchuan/reac_ap_fe](https://github.com/ranyanchuan/reac_ap_fe)
 
-#### 流程
+### 流程
 * 安装最新流程包 `npm install yyuap-bpm@0.3.38 `
 * 安装最新表格参照 `npm install ref-multiple-table@2.0.2`
 * 添加项目级 BPM (源代码在工程中)
@@ -152,6 +192,3 @@ import BpmButtonSubmit from "components/Bpm/BpmButtonSubmit";  //项目级 BPM
 import BpmTaskApprovalWrap from "components/Bpm/BpmTaskApprovalWrap";
 
 ```
-
-#### 查询分页
-+ 
