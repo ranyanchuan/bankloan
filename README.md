@@ -124,7 +124,12 @@ matchData | `Array` | [] | 选中的节点(<span style="color: red; font-size: 1
 theme| `String` | 'ref-red' | 参照主题，现在就两种选择'ref-red'或者'ref-blue' | 否
 searchPanelLocale | `Object` | {'title': '条件筛选EN','resetName': '重置En','searchName': '查询EN','down':'打开EN','up':'关闭EN',} | 复杂搜索标题，按钮的文字等信息 | 否
 
-     
+### 参数解析
+value、displayField value和displayField是针对input框来说。value格式必须符合'{"refname":"初级-T1","refpk":"level1"}'。refname字段不可变，refpk是该数据键，要求具有唯一性。 displayField确定input中显示内容的格式和过滤列表显示内容的格式
+
+value、valueFiled value是input需要使用的数据，要求如上。 valueFiled指定数据源的键，要求具有唯一性。 因此value中refpk指定值应与valueFiled取值一致。
+
+value、matchData value初始化input框值，matchData是指定参照中选中的节点。如果value有值matchData为空，那么input有值但是参照无选中数据，反之value空值matchData有值，那么input为空但是参照有选中数据
   
 
 #### 门户
