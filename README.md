@@ -10,47 +10,88 @@
 * 参照 pap-refer (基于应用平台和基本参照组件封装的应用级参照组件，暂时无对外文档)
 * 项目参照
    * 安装 pap-refer `npm install pap-refer@1.0.2
-   * 单表参照示例
-     * 引入单表参照组件`import {RefMultipleTableWithInput} from 'pap-refer';` 和样式 `import 'pap-refer/dist/index.css';`
-     * 单表示例代码
-     ```js
-        <RefMultipleTableWithInput
-            placeholder="请选择客户" // 参照input placeholder
-            title='请选择客户'  // 参照弹框 title
-            backdrop={true}  //弹出层是否有模态层，true 显示，false 不显示
-            multiple={false} // 单选
-            strictMode={true}  // 严格模式
-            miniSearch={true} // 展示简单搜索
-            valueField={"refpk"} //待提交的value的键。或者说指定真实数据的键。要求具有唯一性
-            displayField={"{name}"} //input中显示的内容的格式和过滤列表显示的内容格式。
-            param={{//url请求参数
-                refCode: 'xwl_customer' // refcode  后端给
-            }}
-            refModelUrl={{
-                tableBodyUrl: '/bankLoan/common-ref/blobRefTreeGrid',//表体请求
-                refInfo: '/bankLoan/common-ref/refInfo',//表头请求
-            }}
-            showLoading={false}
-            filterUrl='/bankLoan/common-ref/filterRefJSON' //快捷录入接口
-            matchUrl='/bankLoan/common-ref/matchPKRefJSON' // 查询
-            onCancel={this.onCancel} // 取消事件回调接口
-            onSave={(values) => {  // 确定事件回调
-                const idArray = values.map(v => v.id); // 获取选中行的数据id
-                self.setState({
-                    refKeyArraycustomer_id: idArray, // 将选中的id 更新的组件的 state 中
-                })
-            }}
+   * 引入参照组件和样式
+   ```js
+   import {RefMultipleTableWithInput,RefTreeTableWithInput} from 'pap-refer';
+   import 'pap-refer/dist/index.css
+   ```
+   * 单表参照示例代码
+   ```js
+      <RefMultipleTableWithInput
+          placeholder="请选择客户" // 参照input placeholder
+          title='请选择客户'  // 参照弹框 title
+          backdrop={true}  //弹出层是否有模态层，true 显示，false 不显示
+          multiple={false} // 单选
+          strictMode={true}  // 严格模式
+          miniSearch={true} // 展示简单搜索
+          valueField={"refpk"} //待提交的value的键。或者说指定真实数据的键。要求具有唯一性
+          displayField={"{name}"} //input中显示的内容的格式和过滤列表显示的内容格式。
+          param={{//url请求参数
+              refCode: 'xwl_customer' // refcode  后端给
+          }}
+          refModelUrl={{
+              tableBodyUrl: '/bankLoan/common-ref/blobRefTreeGrid',//表体请求
+              refInfo: '/bankLoan/common-ref/refInfo',//表头请求
+          }}
+          showLoading={false}
+          filterUrl='/bankLoan/common-ref/filterRefJSON' //快捷录入接口
+          matchUrl='/bankLoan/common-ref/matchPKRefJSON' // 查询接口
+          onCancel={this.onCancel} // 取消事件回调接口
+          onSave={(values) => {  // 确定事件回调
+              const idArray = values.map(v => v.id); // 获取选中行的数据id
+              self.setState({
+                  refKeyArraycustomer_id: idArray, // 将选中的id 更新的组件的 state 中
+              })
+          }}
 
-            {...getFieldProps('customer_id', {
-                initialValue: `{"refname":"${customer_name}","refpk":"${customer_id}"}`, // 参照初始化值
-                rules: [{
-                    message: '请输入内容', //  参照验证失败错误提示
-                    pattern: /[^{"refname":"","refpk":""}]/   // 参照验证规则
-                }]
-            })}
-        >
-        </RefMultipleTableWithInput>
-     ```
+          {...getFieldProps('customer_id', {
+              initialValue: `{"refname":"${customer_name}","refpk":"${customer_id}"}`, // 参照初始化值
+              rules: [{
+                  message: '请输入内容', //  参照验证失败错误提示
+                  pattern: /[^{"refname":"","refpk":""}]/   // 参照验证规则
+              }]
+          })}
+      >
+      </RefMultipleTableWithInput>
+   ```
+    * 左数右表参照示例代码
+   ```js
+    <RefTreeTableWithInput
+      title='组织部门人员'
+      textOption={{
+          menuTitle: '组织',
+          tableTitle: '人员',
+      }}
+      param={{//url请求参数
+          refCode: 'xwl_dept',
+      }}
+      multiple={false}
+      refModelUrl={{
+          treeUrl: '/bankLoan/common-ref/blobRefTree',  // 左树数据请求
+          refInfo: '/bankLoan/common-ref/refInfo',// 表头请求
+          tableBodyUrl: '/bankLoan/common-ref/blobRefTreeGrid',// 表体请求
+      }}
+      matchUrl='/bankLoan/common-ref/matchPKRefJSON' // 快捷录入接口
+      filterUrl='/bankLoan/common-ref/filterRefJSON' // 查询接口
+      displayField='{refname}'    // input中显示的内容的格式和过滤列表显示的内容格式。
+      valueField='refpk' //待提交的value的键。或者说指定真实数据的键。要求具有唯一性
+      
+      {...getFieldProps('orgId', {
+          initialValue:  `{"refname":"${orgName}","refpk":"${orgId}"}`, // 参照初始化值,
+          rules: [{
+              message: '提示：请选择',
+              pattern: /[^{"refname":"","refpk":""}|{"refpk":"","refname":""}]/
+          }]
+      })}
+      
+      onSave={(values) => {  // 确定事件回调
+          const idArray = values.map(v => v.id); // 获取选中行的数据id
+          self.setState({
+              refKeyArrayorgId: idArray, // 将选中的id 更新的组件的 state 中
+          })
+      }}
+  />
+   ```
 ### 单表参照API
 
 参数 | 类型 |默认值| 说明 | 必选
